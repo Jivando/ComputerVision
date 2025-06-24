@@ -1,0 +1,7 @@
+flask
+gunicorn
+ultralytics
+opencv-python
+ffmpeg-python
+torch
+numpy

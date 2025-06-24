@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Processed Video with Traffic Sign Detections</h1>
+        {% if video_filename %}
+            <video controls width="100%">
+                <source src="{{ url_for('serve_processed_video', filename=video_filename) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video processing complete. You can download the video <a href="{{ url_for('serve_processed_video', filename=video_filename) }}" download>here</a>.</p>
+        {% else %}
+            <p>No video processed.</p>
+        {% endif %}
+        <a href="/">Upload another video</a>
+    </div>
+</body>
+</html>
