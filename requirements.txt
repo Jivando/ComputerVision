@@ -1,5 +1,6 @@
 flask
-gunicorn
 ultralytics
-opencv-python
-ffmpeg-python
+opencv-python-headless
+python-dotenv
+gunicorn
+numpy
